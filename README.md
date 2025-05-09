@@ -1,1 +1,1 @@
-# cs3338-final-project
+# CS3338 Final Project: SUAS Flight Path Visualization
