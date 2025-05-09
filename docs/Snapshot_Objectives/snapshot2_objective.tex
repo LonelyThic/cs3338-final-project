@@ -1,0 +1,32 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Snapshot 2 Objective\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Checkpoint 1}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+The main goal of Snapshot 2 is to add the “Mission Upload” feature to the application:
+\begin{itemize}
+  \item Upload flight paths via CSV or JSON.
+  \item Store uploaded waypoints in the database.
+  \item Render uploaded path on the 2.5D map.
+\end{itemize}
+
+\section{New Tasks}
+\begin{itemize}
+  \item Create file upload interface (frontend).
+  \item Add parsing logic and database save API (backend).
+  \item Update database schema to include mission storage.
+  \item Add Mapbox layer to dynamically display uploaded data.
+\end{itemize}
+
+\section{TestRail}
+All upload features tested and verified in TestRail. Report exported separately.
+
+\end{document}

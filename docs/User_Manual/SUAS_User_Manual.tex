@@ -1,0 +1,111 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+
+\hypersetup{
+    pdfborder={0 0 0}, 
+    colorlinks=true,  
+    linkcolor=black,   
+    urlcolor=blue   
+}
+
+\geometry{
+  a4paper,           
+  left=1in,          
+  right=1in,        
+  top=1in,           
+  bottom=1in,       
+  headheight=14pt,   
+  headsep=0.5in,     
+  footskip=0.5in     
+}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+
+\title{SUAS User Manual}
+\author{SUAS Development Team}
+\date{May 2025}
+
+\begin{document}
+
+\maketitle
+\vspace{1cm}
+\tableofcontents
+\newpage
+
+\section{Project Jira Board}
+\textbf{Jira Site:} \href{https://your-team-name.atlassian.net/}{https://your-team-name.atlassian.net/} \\
+(Note: Replace with your actual Jira link if placeholder.)
+
+\section{Formal Objective Breakdown}
+The \textbf{SUAS (Software Unmanned Aircraft System)} project is designed to provide users with a reliable software platform for:
+\begin{itemize}
+    \item Planning UAV missions through a dynamic map interface.
+    \item Simulating flight paths and mission execution.
+    \item Visualizing telemetry data and analyzing mission results.
+    \item Enhancing mission safety and compliance with airspace boundaries.
+\end{itemize}
+
+\section{Why This Software Matters}
+Unmanned Aerial Vehicles (UAVs) are becoming vital in fields like:
+\begin{itemize}
+    \item Environmental surveying
+    \item Agricultural monitoring
+    \item Disaster response
+    \item Package delivery
+\end{itemize}
+
+However, effective mission planning and analysis are still challenging. SUAS fills that gap with:
+\begin{itemize}
+    \item A user-friendly mission planning tool
+    \item Simulated test runs to reduce risk
+    \item Clear visual and data feedback to improve efficiency
+\end{itemize}
+
+\section{How to Download or Access}
+\subsection*{Option 1: Download and Run Locally}
+\begin{enumerate}
+    \item Clone the repository:
+    \begin{lstlisting}
+git clone https://github.com/your-repo-name/suas-project.git
+cd suas-project
+    \end{lstlisting}
+
+    \item Install dependencies:
+    \begin{lstlisting}
+./gradlew build
+    \end{lstlisting}
+
+    \item Run the project:
+    \begin{lstlisting}
+./gradlew bootRun
+    \end{lstlisting}
+
+    \item Open your browser and go to: \texttt{http://localhost:8080}
+\end{enumerate}
+
+\textbf{Note:} You must have Java 17+ and PostgreSQL installed.
+
+\subsection*{Option 2: Access Online (if deployed)}
+Visit: \href{https://your-suassite.com}{https://your-suassite.com}
+
+\section{Additional Help}
+For detailed setup instructions, configuration details, and contribution guidelines, please see the \texttt{/docs} folder or the full developer documentation.
+
+\bigskip
+\noindent
+\textcopyright{}
+2025 SUAS Dev Team
+
+\end{document}

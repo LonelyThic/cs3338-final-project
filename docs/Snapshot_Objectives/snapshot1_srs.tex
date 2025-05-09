@@ -1,0 +1,45 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Software Requirements Specification\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 1}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Purpose}
+Defines the core functional and non-functional requirements for the SUAS visualization tool.
+
+\subsection{Intended Audience}
+Team members, ARL sponsors, QA testers.
+
+\subsection{Product Overview}
+Visualization of stealth flight paths based on sensor profiles and terrain.
+
+\section{External Interface Requirements}
+\subsection{User Interface}
+Map with color-coded detectability, input for mission constraints.
+
+\subsection{Software Interfaces}
+\begin{itemize}
+  \item Mapbox API for 2.5D terrain.
+  \item Django + PostgreSQL.
+\end{itemize}
+
+\section{Legal and Ethical Considerations}
+Designed for use in planning and reducing conflict casualties. Complies with ethical data storage.
+
+\section{Glossary}
+\begin{itemize}
+  \item DFPS: Drone Flight Path Simulator
+  \item OTA: Over-The-Air
+\end{itemize}
+
+\end{document}

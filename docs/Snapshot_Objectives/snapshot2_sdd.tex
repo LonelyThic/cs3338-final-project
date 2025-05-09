@@ -1,0 +1,41 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{margin=1in}
+
+\title{Software Design Document\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 2}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Purpose}
+Updated for Snapshot 2 to include mission file upload functionality.
+
+\section{System Architecture}
+\subsection{New Component: Mission Upload}
+\begin{itemize}
+  \item Upload CSV/JSON mission files.
+  \item Store data in PostgreSQL.
+  \item Render waypoints using Mapbox on frontend.
+\end{itemize}
+
+\section{User Interface}
+\begin{itemize}
+  \item File upload form added.
+  \item Upload status and rendering displayed on map.
+\end{itemize}
+
+\section{New Dependencies}
+\begin{itemize}
+  \item \texttt{papaparse} for CSV parsing (frontend)
+  \item \texttt{flask-upload} (backend)
+\end{itemize}
+
+\end{document}

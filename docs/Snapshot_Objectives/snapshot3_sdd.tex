@@ -1,0 +1,33 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{margin=1in}
+
+\title{Software Design Document\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 3}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{New Feature: Telemetry Analytics}
+\begin{itemize}
+  \item Charts show altitude, speed, and distance vs time.
+  \item Implemented with Chart.js (React).
+  \item Backend aggregates mission data and exposes /telemetry API.
+\end{itemize}
+
+\section{Architecture Additions}
+TelemetryService component handles chart rendering logic. Analytics tab added to UI.
+
+\section{Dependencies}
+\begin{itemize}
+  \item Chart.js
+  \item Flask route for telemetry
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,56 @@
+
+version: '3.8'
+
+services:
+  frontend:
+    image: node:18
+    container_name: suas_frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  backend:
+    image: python:3.11
+    container_name: suas_backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: ["flask", "run", "--host=0.0.0.0"]
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: suas_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: suas
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:latest
+    container_name: suas_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  pgdata:

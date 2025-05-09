@@ -1,0 +1,93 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+\geometry{
+  a4paper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in,
+  headheight=14pt,
+  headsep=0.5in,
+  footskip=0.5in
+}
+
+\hypersetup{
+    pdfborder={0 0 0},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\title{SUAS Project - Snapshot Objectives}
+\author{SUAS Development Team}
+\date{May 2025}
+
+\begin{document}
+
+\maketitle
+\vspace{1cm}
+\tableofcontents
+\newpage
+
+\section{Start Objective}
+At the start of the SUAS project, the goal was to lay the foundation for all core systems. This included:
+\begin{itemize}
+    \item Setting up the development environment (Java, Spring Boot, PostgreSQL).
+    \item Designing the system architecture for separation of concerns (frontend, backend, DB).
+    \item Initializing the Git repository and setting up basic CI/CD (if applicable).
+    \item Creating placeholder UIs for the dashboard and mission planner.
+    \item Drafting initial versions of the SRS and SDD documents.
+\end{itemize}
+
+\section{1st Checkpoint Objective}
+Reflection on the previous phase showed success in establishing the core application structure and working mission planning interface.
+
+The new tasks introduced at this stage included:
+\begin{itemize}
+    \item Integrating pathfinding logic for automatic navigation.
+    \item Adding data persistence for waypoints and mission objects.
+    \item Updating UI to allow real-time path edits.
+    \item Expanding SRS and SDD to reflect new functionalities.
+    \item Creating TestRail test cases for path generation and saving.
+\end{itemize}
+
+\section{2nd Checkpoint Objective}
+At this checkpoint, the simulation engine was implemented and telemetry logging was introduced.
+
+New tasks added:
+\begin{itemize}
+    \item Building a simulation playback system using stored data.
+    \item Implementing data charts for telemetry replay.
+    \item Refining the mission planner UI for better usability.
+    \item Finalizing most of the database schema.
+    \item Updating snapshot documents and reflecting changes in design spec.
+\end{itemize}
+
+\section{Due Date Checkpoint}
+By the project deadline, all core features were functional including:
+\begin{itemize}
+    \item Live mission planning and simulation playback.
+    \item Stable backend and database interactions.
+    \item UI workflows for mission creation and management.
+    \item Full documentation: SRS, SDD, User Manual, Design Spec.
+\end{itemize}
+
+\textbf{Future Work:}
+\begin{itemize}
+    \item Integration with live drone APIs for real deployment.
+    \item Advanced features like auto-collision detection.
+    \item Support for multi-UAV mission coordination.
+    \item Deployment pipeline using Kubernetes or cloud hosting.
+\end{itemize}
+
+\end{document}

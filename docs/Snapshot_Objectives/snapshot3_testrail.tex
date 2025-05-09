@@ -1,0 +1,27 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{TestRail Snapshot 3 Summary\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Checkpoint 2}
+
+\begin{document}
+\maketitle
+
+\section{Test Summary}
+\begin{itemize}
+  \item TC-006: Display chart from sample data (Passed)
+  \item TC-007: Graph update after mission upload (Passed)
+  \item TC-008: Missing telemetry returns 404 (Passed)
+  \item TC-009: Multiple uploads merge correctly (Blocked)
+\end{itemize}
+
+\section{Improvements}
+\begin{itemize}
+  \item Backend now caches telemetry data for performance.
+  \item Graphs show labels for outliers.
+\end{itemize}
+
+\end{document}

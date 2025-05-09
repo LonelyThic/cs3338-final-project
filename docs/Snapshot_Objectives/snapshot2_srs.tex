@@ -1,0 +1,33 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Software Requirements Specification\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 2}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Purpose}
+Updated to include mission file upload and integration into visualization.
+
+\section{External Interface Requirements}
+\subsection{New Functional Requirement}
+The user shall be able to upload a mission file that is parsed, stored, and visualized.
+
+\subsection{Dependencies}
+\begin{itemize}
+  \item PapaParse (React-side CSV handling)
+  \item Flask file upload handlers
+\end{itemize}
+
+\section{Legal and Ethical Considerations}
+Data remains local and secure, uploads only accepted from authenticated users.
+
+\end{document}

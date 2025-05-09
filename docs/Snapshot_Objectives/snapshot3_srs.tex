@@ -1,0 +1,33 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Software Requirements Specification\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 3}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{New Requirements}
+\subsection{Functional}
+\begin{itemize}
+  \item Users shall see telemetry charts from uploaded missions.
+\end{itemize}
+
+\subsection{Non-Functional}
+\begin{itemize}
+  \item Telemetry rendering shall complete in under 2 seconds.
+\end{itemize}
+
+\section{Dependencies}
+\begin{itemize}
+  \item Chart.js (frontend)
+  \item Flask route for mission telemetry
+\end{itemize}
+
+\end{document}

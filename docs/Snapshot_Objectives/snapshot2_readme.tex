@@ -1,0 +1,38 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{User Manual (Updated)\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 2}
+
+\begin{document}
+\maketitle
+
+\section{Project Overview}
+This tool allows planning and visualization of SUAS drone missions with stealth considerations. Snapshot 2 introduces mission upload capabilities.
+
+\section{New Feature: Mission Upload}
+\begin{itemize}
+  \item Users can upload CSV or JSON files with waypoints.
+  \item Uploaded paths are saved in the database and rendered on the map.
+\end{itemize}
+
+\section{How to Use}
+\begin{itemize}
+  \item Access the app at: \texttt{http://localhost}
+  \item Log in, navigate to “Upload Mission”, select a file and submit.
+  \item Watch the route display on the dashboard map.
+\end{itemize}
+
+\section{Installation}
+\begin{itemize}
+  \item Clone the repo: \texttt{https://github.com/your-org/suas-project}
+  \item Run: \texttt{docker-compose up}
+\end{itemize}
+
+\section{Jira}
+All development tasks tracked on Jira: \texttt{https://yourteam.atlassian.net}
+
+\end{document}

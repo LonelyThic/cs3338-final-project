@@ -1,0 +1,60 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{Software Design Document\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 1}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Purpose}
+This document provides the initial design of the SUAS Flight Path Visualization tool.
+
+\subsection{Intended Audience}
+Developers, project stakeholders, and future contributors.
+
+\subsection{Overview}
+Web-based mission planning software for stealth drone paths over terrain.
+
+\section{System Architecture}
+\subsection{Overview}
+\begin{itemize}
+  \item React frontend with Mapbox GL JS for maps.
+  \item Flask backend exposing REST APIs.
+  \item PostgreSQL with GeoDjango for spatial data.
+  \item NGINX as reverse proxy.
+\end{itemize}
+
+\subsection{Workflow}
+\includegraphics[width=\textwidth]{workflow_diagram.png}
+
+\section{User Interface}
+\begin{itemize}
+  \item Map-based dashboard.
+  \item Flight path creation and visualization.
+  \item Terrain and risk overlay options.
+\end{itemize}
+
+\section{Glossary}
+\begin{itemize}
+  \item DFPS: Drone Flight Path Simulator
+  \item SUAS: Small Unmanned Aircraft System
+  \item JWT: JSON Web Token
+\end{itemize}
+
+\section{References}
+\begin{itemize}
+  \item https://docs.mapbox.com
+  \item https://flask.palletsprojects.com
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,122 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\geometry{margin=1in}
+
+\title{SUAS Flight Path Visualization - Design Specification}
+\author{Army Research Lab Project Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Overview}
+This document describes the components, tools, and libraries required for the SUAS Flight Path Visualization web application. It also outlines each page and feature implemented in the system.
+
+\section*{2. System Pages and Components}
+
+\subsection*{2.1 Home Page}
+\begin{itemize}
+    \item Provides an overview and navigation to other components.
+    \item Features a header, navigation bar, and short project description.
+\end{itemize}
+
+\subsection*{2.2 Flight Dashboard}
+\begin{itemize}
+    \item Real-time or simulated visualization of SUAS flight paths on a map.
+    \item Map rendered with Leaflet.js or Mapbox GL JS.
+    \item Data from backend APIs visualized as polylines and markers.
+\end{itemize}
+
+\subsection*{2.3 Mission Upload}
+\begin{itemize}
+    \item Allows uploading of mission files (JSON/CSV).
+    \item Parses and stores waypoint data.
+    \item Backend parsing with Python or Node.js.
+\end{itemize}
+
+\subsection*{2.4 Analytics and Telemetry}
+\begin{itemize}
+    \item Charts for speed, altitude, distance vs time.
+    \item Implemented using Chart.js or D3.js.
+\end{itemize}
+
+\subsection*{2.5 Admin Panel}
+\begin{itemize}
+    \item For managing users, uploading test runs, and tracking system status.
+    \item Protected with authentication (JWT/Session).
+\end{itemize}
+
+\section*{3. Technologies and Tools}
+
+\subsection*{Frontend}
+\begin{itemize}
+    \item \textbf{React.js}
+        \begin{itemize}
+            \item Libraries: react, react-dom, react-router-dom, axios
+        \end{itemize}
+    \item \textbf{Bootstrap 5}
+    \item \textbf{Chart.js} for plotting
+    \item \textbf{Mapbox GL JS} or \textbf{Leaflet.js} for maps
+\end{itemize}
+
+\subsection*{Backend}
+\begin{itemize}
+    \item \textbf{Python Flask}
+        \begin{itemize}
+            \item Libraries: flask, flask-restful, flask-cors, flask-jwt-extended, pandas
+        \end{itemize}
+    \item \textbf{PostgreSQL} for mission data and user storage
+    \item \textbf{SQLAlchemy} ORM
+\end{itemize}
+
+\subsection*{Authentication}
+\begin{itemize}
+    \item JWT-based authentication using flask-jwt-extended
+    \item bcrypt for password hashing
+\end{itemize}
+
+\subsection*{Deployment}
+\begin{itemize}
+    \item Docker and Docker Compose
+    \item NGINX as reverse proxy
+\end{itemize}
+
+\section*{4. Required Packages and Dependencies}
+
+\subsection*{Frontend (package.json)}
+\begin{lstlisting}
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "axios": "^1.3.0",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.2.1",
+    "mapbox-gl": "^2.10.0"
+  }
+}
+\end{lstlisting}
+
+\subsection*{Backend (requirements.txt)}
+\begin{lstlisting}
+flask
+flask-restful
+flask-cors
+flask-jwt-extended
+sqlalchemy
+pandas
+bcrypt
+psycopg2-binary
+\end{lstlisting}
+
+\section*{5. Docker Containers}
+See accompanying docker-compose.yml for breakdown.
+
+\end{document}

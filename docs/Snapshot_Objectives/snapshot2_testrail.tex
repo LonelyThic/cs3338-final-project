@@ -1,0 +1,30 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{TestRail Summary\\Snapshot 2\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Test Suite Summary: Mission Upload Feature}
+
+\subsection*{Overview}
+This TestRail summary covers the newly implemented Mission Upload feature for Snapshot 2.
+
+\subsection*{Test Cases}
+\begin{itemize}
+  \item \textbf{TC-201: Upload Valid CSV} - Passed
+  \item \textbf{TC-202: Upload Invalid Format} - Passed
+  \item \textbf{TC-203: Upload With Missing Fields} - Passed
+  \item \textbf{TC-204: Backend API Parse and Save} - Passed
+  \item \textbf{TC-205: Visual Confirmation on Mapbox Map} - Passed
+\end{itemize}
+
+\subsection*{Notes}
+All tests executed successfully. The upload interface, parsing logic, and visualization components work as expected. Additional validations may be added in Snapshot 3 for extended formats and larger data sets.
+
+\end{document}
