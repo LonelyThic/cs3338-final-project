@@ -1,0 +1,40 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{User Manual (Final Update)\\SUAS Flight Path Visualization}
+\author{Army Research Lab Project Team}
+\date{Snapshot 4}
+
+\begin{document}
+\maketitle
+
+\section{Final Features}
+\begin{itemize}
+  \item Geofencing for defining and avoiding restricted zones.
+  \item Alerts for detection risk and low battery.
+  \item Emergency landing triggers.
+\end{itemize}
+
+\section{How to Use}
+\begin{enumerate}
+  \item Launch the stack: \texttt{docker-compose up}
+  \item Log in to the web interface.
+  \item Upload a mission file, visualize on map.
+  \item Toggle analytics and geofence layers via sidebar.
+\end{enumerate}
+
+\section{Known Limitations}
+\begin{itemize}
+  \item Telemetry data is currently simulated.
+  \item Mobile interface in beta view.
+\end{itemize}
+
+\section{Future Work}
+\begin{itemize}
+  \item Real-time drone integration.
+  \item Advanced route optimization.
+\end{itemize}
+
+\end{document}
